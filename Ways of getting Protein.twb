@@ -1,0 +1,1453 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.23.1017.0948                               -->
+<workbook original-version='18.1' source-build='2023.3.0 (20233.23.1017.0948)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='WaysofgettingProtein' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column alias='Cost(Per 20g of Protein)' caption='Cost or Protein' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Cost&quot;'>
+        <calculation class='tableau' formula='&quot;Cost&quot;' />
+        <aliases>
+          <alias key='&quot;Cost&quot;' value='Cost(Per 20g of Protein)' />
+          <alias key='&quot;Protein&quot;' value='Protein(Per package in g)' />
+        </aliases>
+        <members>
+          <member alias='Protein(Per package in g)' value='&quot;Protein&quot;' />
+          <member alias='Cost(Per 20g of Protein)' value='&quot;Cost&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Sheet1 (Protein Costs)' inline='true' name='federated.1wcvslv1yerjle10wxr0t0gac44y' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Protein Costs' name='excel-direct.1ni7wnf1cabke019t1s710y2kh4g'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/akash deep/Downloads/Protein Costs.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.1ni7wnf1cabke019t1s710y2kh4g' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:G23:no:A1:G23:0' header='yes' outcome='2'>
+            <column datatype='string' name='Protein Source' ordinal='0' />
+            <column datatype='real' name='Cost per 20 Grams of Protein (US Dollars)' ordinal='1' />
+            <column datatype='string' name='Cost per package' ordinal='2' />
+            <column datatype='integer' name='Total Protein per package (g)' ordinal='3' />
+            <column datatype='string' name='Vegetarian?' ordinal='4' />
+            <column datatype='string' name='Vegan?' ordinal='5' />
+            <column datatype='string' name='Notes' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.1ni7wnf1cabke019t1s710y2kh4g' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:G23:no:A1:G23:0' header='yes' outcome='2'>
+            <column datatype='string' name='Protein Source' ordinal='0' />
+            <column datatype='real' name='Cost per 20 Grams of Protein (US Dollars)' ordinal='1' />
+            <column datatype='string' name='Cost per package' ordinal='2' />
+            <column datatype='integer' name='Total Protein per package (g)' ordinal='3' />
+            <column datatype='string' name='Vegetarian?' ordinal='4' />
+            <column datatype='string' name='Vegan?' ordinal='5' />
+            <column datatype='string' name='Notes' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G23:no:A1:G23:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Protein Source</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Protein Source]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Protein Source</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cost per 20 Grams of Protein (US Dollars)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Cost per 20 Grams of Protein (US Dollars)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Cost per 20 Grams of Protein (US Dollars)</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cost per package</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Cost per package]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Cost per package</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Protein per package (g)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Protein per package (g)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Total Protein per package (g)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vegetarian?</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Vegetarian?]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Vegetarian?</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vegan?</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Vegan?]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Vegan?</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Notes</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Notes]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Notes</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Vegan or Non vegan' datatype='string' name='[Calculation_1130966484200226816]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Vegan?]=&quot;F&quot; then &quot;Non Vegan&quot; &#13;&#10;ELSEIF [Vegan?]=&quot;T&quot; THEN &quot;Vegan&quot; END' />
+      </column>
+      <column caption='Vegetarian or Non vegetarian' datatype='string' name='[Calculation_1130966484204371972]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Vegetarian?]=&quot;T&quot; THEN &quot;Vegetarian&quot;&#13;&#10;ELSEIF [Vegetarian?]=&quot;F&quot; THEN &quot;Non Vegetarian&quot; END' />
+      </column>
+      <column caption='Select Cost or Protein' datatype='real' name='[Calculation_1130966484206854151]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 1]=&quot;Cost&quot; &#13;&#10;THEN [Cost per 20 Grams of Protein (US Dollars)]&#13;&#10;ELSEIF [Parameters].[Parameter 1]=&quot;Protein&quot;&#13;&#10;THEN [Total Protein per package (g)] END' />
+      </column>
+      <column datatype='string' name='[Protein Source]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_D93A7A8F820D44699E08BF9AD1359916]' role='measure' type='quantitative' />
+      <group caption='Action (Protein Source)' hidden='true' name='[Action (Protein Source)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Protein Source]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Vegan or Non vegan)' hidden='true' name='[Action (Vegan or Non vegan)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_1130966484200226816]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Vegetarian or Non vegetarian)' hidden='true' name='[Action (Vegetarian or Non vegetarian)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_1130966484204371972]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/akash deep/OneDrive/Documents/My Tableau Repository/Datasources/Sheet1 (Protein Costs).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='11/29/2023 07:14:51 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='Sheet1 (Protein Costs)' increment-value='%null%' refresh-type='create' rows-inserted='22' timestamp-start='2023-11-29 19:14:50.758' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Protein Source</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Protein Source]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Protein Source</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>22</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cost per 20 Grams of Protein (US Dollars)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Cost per 20 Grams of Protein (US Dollars)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cost per 20 Grams of Protein (US Dollars)</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cost per package</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Cost per package]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cost per package</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>22</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total Protein per package (g)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total Protein per package (g)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total Protein per package (g)</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Vegetarian?</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Vegetarian?]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Vegetarian?</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Vegan?</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Vegan?]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Vegan?</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Notes</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Notes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Notes</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_D93A7A8F820D44699E08BF9AD1359916]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column alias='Cost(Per 20g of Protein)' caption='Cost or Protein' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Cost&quot;'>
+          <calculation class='tableau' formula='&quot;Cost&quot;' />
+          <aliases>
+            <alias key='&quot;Cost&quot;' value='Cost(Per 20g of Protein)' />
+            <alias key='&quot;Protein&quot;' value='Protein(Per package in g)' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_D93A7A8F820D44699E08BF9AD1359916'>
+            <properties context=''>
+              <relation connection='excel-direct.1ni7wnf1cabke019t1s710y2kh4g' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:G23:no:A1:G23:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Protein Source' ordinal='0' />
+                  <column datatype='real' name='Cost per 20 Grams of Protein (US Dollars)' ordinal='1' />
+                  <column datatype='string' name='Cost per package' ordinal='2' />
+                  <column datatype='integer' name='Total Protein per package (g)' ordinal='3' />
+                  <column datatype='string' name='Vegetarian?' ordinal='4' />
+                  <column datatype='string' name='Vegan?' ordinal='5' />
+                  <column datatype='string' name='Notes' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_EF7F351C61854446A0A9A84F2B90E203]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Ways of getting Protein' type='sheet' worksheet='Vegan or not filter' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Ways of getting Protein' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_BA81D63102F048CC9F111AAB1BFEFF7F]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Ways of getting Protein' type='sheet' worksheet='Vegetarian or not filter' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Ways of getting Protein' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Cost/Protein Content analysis '>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Protein Costs)' name='federated.1wcvslv1yerjle10wxr0t0gac44y' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column alias='Cost(Per 20g of Protein)' caption='Cost or Protein' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Cost&quot;'>
+              <calculation class='tableau' formula='&quot;Cost&quot;' />
+              <aliases>
+                <alias key='&quot;Cost&quot;' value='Cost(Per 20g of Protein)' />
+                <alias key='&quot;Protein&quot;' value='Protein(Per package in g)' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1wcvslv1yerjle10wxr0t0gac44y'>
+            <column caption='Vegan or Non vegan' datatype='string' name='[Calculation_1130966484200226816]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Vegan?]=&quot;F&quot; then &quot;Non Vegan&quot; &#13;&#10;ELSEIF [Vegan?]=&quot;T&quot; THEN &quot;Vegan&quot; END' />
+            </column>
+            <column caption='Vegetarian or Non vegetarian' datatype='string' name='[Calculation_1130966484204371972]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Vegetarian?]=&quot;T&quot; THEN &quot;Vegetarian&quot;&#13;&#10;ELSEIF [Vegetarian?]=&quot;F&quot; THEN &quot;Non Vegetarian&quot; END' />
+            </column>
+            <column caption='Select Cost or Protein' datatype='real' name='[Calculation_1130966484206854151]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 1]=&quot;Cost&quot; &#13;&#10;THEN [Cost per 20 Grams of Protein (US Dollars)]&#13;&#10;ELSEIF [Parameters].[Parameter 1]=&quot;Protein&quot;&#13;&#10;THEN [Total Protein per package (g)] END' />
+            </column>
+            <column datatype='real' name='[Cost per 20 Grams of Protein (US Dollars)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Protein Source]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Total Protein per package (g)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Vegan?]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Vegetarian?]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1130966484200226816]' derivation='Attribute' name='[attr:Calculation_1130966484200226816:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1130966484204371972]' derivation='Attribute' name='[attr:Calculation_1130966484204371972:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Protein Source]' derivation='None' name='[none:Protein Source:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1130966484206854151]' derivation='Avg' name='[rank:avg:Calculation_1130966484206854151:ok:3]' pivot='key' type='ordinal'>
+              <table-calc ordering-field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[Protein Source]' ordering-type='Field' rank-options='Competition,Descending' type='Rank' />
+            </column-instance>
+            <column-instance column='[Calculation_1130966484206854151]' derivation='Sum' name='[sum:Calculation_1130966484206854151:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wcvslv1yerjle10wxr0t0gac44y].[Action (Vegan or Non vegan)]'>
+            <groupfilter function='level-members' level='[Calculation_1130966484200226816]' user:ui-action-filter='[Action1_EF7F351C61854446A0A9A84F2B90E203]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1wcvslv1yerjle10wxr0t0gac44y].[Action (Vegetarian or Non vegetarian)]'>
+            <groupfilter function='level-members' level='[Calculation_1130966484204371972]' user:ui-action-filter='[Action2_BA81D63102F048CC9F111AAB1BFEFF7F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1wcvslv1yerjle10wxr0t0gac44y].[Action (Vegan or Non vegan)]</column>
+            <column>[federated.1wcvslv1yerjle10wxr0t0gac44y].[Action (Vegetarian or Non vegetarian)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[sum:Calculation_1130966484206854151:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[rank:avg:Calculation_1130966484206854151:ok:3]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[sum:Calculation_1130966484206854151:qk]' palette='sunrise_sunset_diverging_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='div-level' scope='rows' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1wcvslv1yerjle10wxr0t0gac44y].[sum:Calculation_1130966484206854151:qk]' />
+              <tooltip column='[federated.1wcvslv1yerjle10wxr0t0gac44y].[attr:Calculation_1130966484200226816:nk]' />
+              <tooltip column='[federated.1wcvslv1yerjle10wxr0t0gac44y].[attr:Calculation_1130966484204371972:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'><![CDATA[<[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Protein Source:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[<[federated.1wcvslv1yerjle10wxr0t0gac44y].[attr:Calculation_1130966484200226816:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[<[federated.1wcvslv1yerjle10wxr0t0gac44y].[attr:Calculation_1130966484204371972:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'><![CDATA[ <[Parameters].[Parameter 1]>:  ]]></run>
+                <run bold='true'><![CDATA[<[federated.1wcvslv1yerjle10wxr0t0gac44y].[sum:Calculation_1130966484206854151:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.7251380681991577' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1wcvslv1yerjle10wxr0t0gac44y].[rank:avg:Calculation_1130966484206854151:ok:3] / [federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Protein Source:nk])</rows>
+        <cols>[federated.1wcvslv1yerjle10wxr0t0gac44y].[sum:Calculation_1130966484206854151:qk]</cols>
+      </table>
+      <simple-id uuid='{6396F511-756F-4674-B8FB-1C3DA85DF608}' />
+    </worksheet>
+    <worksheet name='Vegan or not filter'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Protein Costs)' name='federated.1wcvslv1yerjle10wxr0t0gac44y' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wcvslv1yerjle10wxr0t0gac44y'>
+            <column caption='Vegan or Non vegan' datatype='string' name='[Calculation_1130966484200226816]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Vegan?]=&quot;F&quot; then &quot;Non Vegan&quot; &#13;&#10;ELSEIF [Vegan?]=&quot;T&quot; THEN &quot;Vegan&quot; END' />
+            </column>
+            <column caption='1' datatype='integer' name='[Calculation_1130966484203282435]' role='measure' type='quantitative' user:unnamed='Sheet 1'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Vegetarian or Non vegetarian' datatype='string' name='[Calculation_1130966484204371972]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Vegetarian?]=&quot;T&quot; THEN &quot;Vegetarian&quot;&#13;&#10;ELSEIF [Vegetarian?]=&quot;F&quot; THEN &quot;Non Vegetarian&quot; END' />
+            </column>
+            <column datatype='string' name='[Vegan?]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Vegetarian?]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1130966484203282435]' derivation='Min' name='[min:Calculation_1130966484203282435:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1130966484200226816]' derivation='None' name='[none:Calculation_1130966484200226816:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wcvslv1yerjle10wxr0t0gac44y].[Action (Vegetarian or Non vegetarian)]'>
+            <groupfilter function='level-members' level='[Calculation_1130966484204371972]' user:ui-action-filter='[Action2_BA81D63102F048CC9F111AAB1BFEFF7F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Calculation_1130966484200226816:nk]' />
+              <groupfilter function='member' level='[none:Calculation_1130966484200226816:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]</column>
+            <column>[federated.1wcvslv1yerjle10wxr0t0gac44y].[Action (Vegetarian or Non vegetarian)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[min:Calculation_1130966484203282435:qk]' field-type='quantitative' max='1' min='0' range-type='fixed' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[min:Calculation_1130966484203282435:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' value='103' />
+            <format attr='wrap' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' value='off' />
+            <format attr='vertical-align' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' value='center' />
+            <format attr='font-size' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' value='14' />
+            <format attr='font-weight' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' value='bold' />
+            <format attr='text-decoration' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' value='none' />
+            <format attr='font-style' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' value='normal' />
+            <format attr='color' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' value='#e6e6e6' />
+            <format attr='text-align' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' value='center' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[min:Calculation_1130966484203282435:qk]' value='#ddebf0' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' value='false' />
+            <format attr='text-align' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' value='left' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='24'>&lt;</run>
+                <run fontsize='24'>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]</run>
+                <run fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.7251380681991577' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]</rows>
+        <cols>[federated.1wcvslv1yerjle10wxr0t0gac44y].[min:Calculation_1130966484203282435:qk]</cols>
+      </table>
+      <simple-id uuid='{CBE5FB1E-CAE6-4BD0-A72A-D4C1A0905097}' />
+    </worksheet>
+    <worksheet name='Vegetarian or not filter'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Protein Costs)' name='federated.1wcvslv1yerjle10wxr0t0gac44y' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wcvslv1yerjle10wxr0t0gac44y'>
+            <column caption='Vegan or Non vegan' datatype='string' name='[Calculation_1130966484200226816]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Vegan?]=&quot;F&quot; then &quot;Non Vegan&quot; &#13;&#10;ELSEIF [Vegan?]=&quot;T&quot; THEN &quot;Vegan&quot; END' />
+            </column>
+            <column caption='Vegetarian or Non vegetarian' datatype='string' name='[Calculation_1130966484204371972]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Vegetarian?]=&quot;T&quot; THEN &quot;Vegetarian&quot;&#13;&#10;ELSEIF [Vegetarian?]=&quot;F&quot; THEN &quot;Non Vegetarian&quot; END' />
+            </column>
+            <column caption='1' datatype='integer' name='[Calculation_1130966484204703750]' role='measure' type='quantitative' user:unnamed='Sheet 3'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[Vegan?]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Vegetarian?]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1130966484204703750]' derivation='Max' name='[max:Calculation_1130966484204703750:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1130966484204371972]' derivation='None' name='[none:Calculation_1130966484204371972:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wcvslv1yerjle10wxr0t0gac44y].[Action (Vegan or Non vegan)]'>
+            <groupfilter function='level-members' level='[Calculation_1130966484200226816]' user:ui-action-filter='[Action1_EF7F351C61854446A0A9A84F2B90E203]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1wcvslv1yerjle10wxr0t0gac44y].[Action (Vegan or Non vegan)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[max:Calculation_1130966484204703750:qk]' field-type='quantitative' max='1' min='0' range-type='fixed' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[max:Calculation_1130966484204703750:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-align' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484204371972:nk]' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484204371972:nk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484204371972:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='18'>&lt;</run>
+                <run bold='true' fontsize='18'>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484204371972:nk]</run>
+                <run bold='true' fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#b07aa1' />
+                <format attr='size' value='1.7141436338424683' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484204371972:nk]</rows>
+        <cols>[federated.1wcvslv1yerjle10wxr0t0gac44y].[max:Calculation_1130966484204703750:qk]</cols>
+      </table>
+      <simple-id uuid='{592197CA-1864-4CD5-98A6-4F236FFFF69F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Ways of getting Protein'>
+      <style>
+        <style-rule element='parameter-ctrl'>
+          <format attr='background-color' value='#f9e9e0' />
+          <format attr='font-size' value='9' />
+          <format attr='font-weight' value='bold' />
+          <format attr='text-decoration' value='none' />
+          <format attr='color' value='#606b76' />
+          <format attr='font-family' value='Tableau Book' />
+        </style-rule>
+      </style>
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column alias='Cost(Per 20g of Protein)' caption='Cost or Protein' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Cost&quot;'>
+          <calculation class='tableau' formula='&quot;Cost&quot;' />
+          <aliases>
+            <alias key='&quot;Cost&quot;' value='Cost(Per 20g of Protein)' />
+            <alias key='&quot;Protein&quot;' value='Protein(Per package in g)' />
+          </aliases>
+          <members>
+            <member alias='Protein(Per package in g)' value='&quot;Protein&quot;' />
+            <member alias='Cost(Per 20g of Protein)' value='&quot;Cost&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='11' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='14' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='12' type-v2='layout-basic' w='98828' x='586' y='1042' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='77604' id='7' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='25549' x='805' y='9505'>
+          <zone fixed-size='278' h='38802' id='5' is-fixed='true' name='Vegan or not filter' w='25549' x='805' y='9505'>
+            <layout-cache type-h='cell' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='38802' id='6' name='Vegetarian or not filter' w='25549' x='805' y='48307'>
+            <layout-cache type-h='cell' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='89193' id='8' name='Cost/Protein Content analysis ' w='69180' x='28990' y='7292' />
+        <zone h='7161' id='10' mode='list' param='[Parameters].[Parameter 1]' show-title='false' type-v2='paramctrl' w='17643' x='79722' y='83724' />
+        <zone forceUpdate='true' h='4557' id='15' type-v2='text' w='15300' x='60176' y='95443'>
+          <formatted-text>
+            <run fontcolor='#000000' fontsize='10'>&lt;</run>
+            <run fontcolor='#000000' fontsize='10'>[Parameters].[Parameter 1]</run>
+            <run fontcolor='#000000' fontsize='10'>&gt;</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='21' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='20' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='280' h='89193' id='8' is-fixed='true' name='Cost/Protein Content analysis ' w='69180' x='28990' y='7292'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38802' id='5' is-fixed='true' name='Vegan or not filter' w='25549' x='805' y='9505'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38802' id='6' is-fixed='true' name='Vegetarian or not filter' w='25549' x='805' y='48307'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7161' id='10' mode='list' param='[Parameters].[Parameter 1]' show-title='false' type-v2='paramctrl' w='17643' x='79722' y='83724'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4557' id='15' type-v2='text' w='15300' x='60176' y='95443'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontsize='10'>&lt;</run>
+                    <run fontcolor='#000000' fontsize='10'>[Parameters].[Parameter 1]</run>
+                    <run fontcolor='#000000' fontsize='10'>&gt;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{7B53E14E-3F9B-42C9-86C8-8A60740CDF4C}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Vegan or not filter'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]</field>
+            <field>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Protein Source:nk]</field>
+            <field>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Vegan?:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6AE56625-A314-4BF5-8181-79BDB61C0457}' />
+    </window>
+    <window class='worksheet' name='Vegetarian or not filter'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484204371972:nk]</field>
+            <field>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Protein Source:nk]</field>
+            <field>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Vegetarian?:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F201985F-03A1-4DF0-A0CE-2E9F827CC24D}' />
+    </window>
+    <window class='worksheet' name='Cost/Protein Content analysis '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='list' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='1' param='[federated.1wcvslv1yerjle10wxr0t0gac44y].[sum:Calculation_1130966484206854151:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484200226816:nk]</field>
+            <field>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Calculation_1130966484204371972:nk]</field>
+            <field>[federated.1wcvslv1yerjle10wxr0t0gac44y].[none:Protein Source:nk]</field>
+            <field>[federated.1wcvslv1yerjle10wxr0t0gac44y].[rank:avg:Calculation_1130966484206854151:ok:3]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4E4C3D8A-EB9C-4800-AAFA-25AAAA35ABB8}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Ways of getting Protein'>
+      <viewpoints>
+        <viewpoint name='Cost/Protein Content analysis '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Vegan or not filter'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Vegetarian or not filter'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='5' />
+      <simple-id uuid='{F26FEDE9-FA86-4EEB-962D-69FAA0342C5B}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Cost/Protein Content analysis ' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Vegan or not filter' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Vegetarian or not filter' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Ways of getting Protein' width='192'>
+      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
+      AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
